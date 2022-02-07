@@ -1,15 +1,12 @@
 import './App.css';
+import Login from './components/login/Login';
 
 function App() {
   return (
     <div className="App">
-      <h2>Spotify Clone</h2>
+      <Login />
     </div>
   );
 }
 
 export default App;
-
-
-
-// acd9765734c7429dbb5235cd4c417830

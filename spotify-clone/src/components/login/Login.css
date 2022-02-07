@@ -1,0 +1,8 @@
+.login {
+  display: grid;
+  place-items: center;
+}
+
+.login > a {
+  padding: 20px;
+}
