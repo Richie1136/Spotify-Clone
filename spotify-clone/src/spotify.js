@@ -6,6 +6,7 @@ const redirectUri = 'http://localhost:3000/'
 
 const clientId = 'acd9765734c7429dbb5235cd4c417830'
 
+// Permissions
 const scopes = [
   "user-read-currently-playing",
   "user-read-recently-played",
@@ -14,4 +15,4 @@ const scopes = [
   "user-modify-playback-state",
 ]
 
-export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true` 
