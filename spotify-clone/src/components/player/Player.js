@@ -1,8 +1,17 @@
+import './Player.css'
+import Body from '../body/Body';
+import Sidebar from '../sidebar/Sidebar';
+import Footer from '../footer/Footer';
 
-const Player = () => {
+
+const Player = ({ spotify }) => {
   return (
-    <div>
-      <h1>Welcome to Spotify</h1>
+    <div className='player'>
+      <div className='player-body'>
+        <Sidebar />
+        <Body />
+      </div>
+      <Footer />
     </div>
   )
 };

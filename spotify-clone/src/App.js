@@ -31,13 +31,11 @@ function App() {
     }
   }, [dispatch]);
 
-  console.log(user)
-  console.log(token)
 
   return (
     <div className="App">
       {token ? (
-        <Player />
+        <Player spotify={spotify} />
       ) : (
         <Login />
       )}
