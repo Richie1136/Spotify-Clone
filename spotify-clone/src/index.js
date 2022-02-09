@@ -2,10 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+import { SpotifyContextProvider } from './store/spotify-context'
+import { initialState } from './reducer';
+import reducer from './reducer'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <SpotifyContextProvider initialState={initialState} reducer={reducer}>
+      <App />
+    </SpotifyContextProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
