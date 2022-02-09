@@ -12,4 +12,4 @@ export const SpotifyContextProvider = ({ children, initialState, reducer }) => {
   )
 }
 
-export default SpotifyContext
+export const useSpotifyContext = () => useContext(SpotifyContext)

@@ -4,11 +4,14 @@ import { useEffect, useState } from 'react'
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from 'spotify-web-api-js';
 import Player from './components/player/Player';
+import { useSpotifyContext } from './store/spotify-context'
 
 const spotify = new SpotifyWebApi()
 
 function App() {
   const [token, setToken] = useState(null);
+  const [{ user }, dispatch] = useSpotifyContext()
+
 
   useEffect(() => {
     const hash = getTokenFromUrl()
@@ -18,10 +21,15 @@ function App() {
       setToken(_token)
       spotify.setAccessToken(_token)
       spotify.getMe().then(user => {
-        console.log(user)
+        dispatch({
+          type: 'SET_USER',
+          user: user
+        })
       })
     }
-  }, []);
+  }, [dispatch]);
+
+  console.log(user)
 
   return (
     <div className="App">
