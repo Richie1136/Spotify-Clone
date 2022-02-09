@@ -1,7 +1,8 @@
+import './Body.css'
 
 const Body = () => {
   return (
-    <div>Body</div>
+    <div className='body'>Body</div>
   )
 }
 
