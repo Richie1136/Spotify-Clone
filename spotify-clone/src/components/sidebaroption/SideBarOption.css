@@ -2,9 +2,28 @@
   color: grey;
   height: 40px;
   cursor: pointer;
+  align-items: center;
   transition: 200ms color ease-in;
+  display: flex;
 }
 
 .sidebarOption:hover {
   color: white;
+}
+
+.sidebarOption_icon {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.sidebar > hr {
+  width: 90%;
+  margin: 10px auto;
+  border: 1px solid #282828;
+}
+
+.sidebarOption > p {
+  margin-top: 10px;
+  margin-left: 20px;
+  font-size: 14px;
 }
