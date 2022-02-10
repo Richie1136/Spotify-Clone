@@ -3,8 +3,13 @@ import './Sidebar.css'
 import HomeIcon from '@material-ui/icons/Home'
 import SearchIcon from '@material-ui/icons/Search'
 import LibraryMusicIcon from '@material-ui/icons/LibraryMusic'
+import { useSpotifyContext } from '../../store/spotify-context'
+
 
 const Sidebar = () => {
+
+  const [{ playLists }, dispatch] = useSpotifyContext()
+
   return (
     <div className='sidebar'>
       <img className='sidebar-logo' src='https://getheavy.com/wp-content/uploads/2019/12/spotify2019-830x350.jpg' alt='' />
@@ -14,7 +19,9 @@ const Sidebar = () => {
       <br />
       <strong className='sidebar_title'>PLAYLISTS</strong>
       <hr />
-      <SideBarOption title='This is it' />
+      {playLists?.items?.map(playlist => {
+        return <SideBarOption title={playlist.name} />
+      })}
     </div>
   )
 }
