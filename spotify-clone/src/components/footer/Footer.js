@@ -14,7 +14,11 @@ const Footer = () => {
   return (
     <div className='footer'>
       <div className='footer-left'>
-        <p>Album and song details</p>
+        <img className='footer-album_logo' src='https://d1csarkz8obe9u.cloudfront.net/posterpreviews/jazz-dark-album-cover-template-966020e215ba3c34a2b5d68b2d386cd7_screen.jpg?ts=1561547030' alt='' />
+        <div className='footer_songInfo'>
+          <h4>No song is playing</h4>
+          <p>...</p>
+        </div>
       </div>
       <div className='footer-center'>
         <ShuffleIcon className='footer_green' />
