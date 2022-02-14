@@ -9,7 +9,6 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
 
 const Body = ({ spotify }) => {
   const [{ discover_weekly }, dispatch] = useSpotifyContext()
-  console.log(discover_weekly.name)
 
   return (
     <div className='body'>
@@ -24,8 +23,8 @@ const Body = ({ spotify }) => {
       </div>
       <div className='body-songs'>
         <div className='body-icons'>
-          <PlayCircleFilledIcon />
-          <FavoriteIcon />
+          <PlayCircleFilledIcon className='body-shuffle' />
+          <FavoriteIcon fontSize='large' />
           <MoreHorizIcon />
         </div>
         {/* List of songs */}
