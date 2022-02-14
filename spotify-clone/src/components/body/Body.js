@@ -4,11 +4,13 @@ import { useSpotifyContext } from '../../store/spotify-context'
 import PlayCircleFilledIcon from '@material-ui/icons/PlayCircleFilled'
 import FavoriteIcon from '@material-ui/icons/Favorite'
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz'
+import SongRow from '../songrow/SongRow'
 
 
 
 const Body = ({ spotify }) => {
   const [{ discover_weekly }, dispatch] = useSpotifyContext()
+  console.log(discover_weekly)
 
   return (
     <div className='body'>
@@ -28,6 +30,9 @@ const Body = ({ spotify }) => {
           <MoreHorizIcon />
         </div>
         {/* List of songs */}
+        {/* {discover_weekly?.tracks.items.map(item => {
+          return <SongRow track={item.track} />
+        })} */}
       </div>
     </div>
   )
