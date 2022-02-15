@@ -20,7 +20,7 @@ const reducer = (state, action) => {
     case 'SET_PLAYLISTS':
       return {
         ...state,
-        playLists: action.playLists
+        playlists: action.playlists,
       }
     case 'SET_TOKEN':
       return {

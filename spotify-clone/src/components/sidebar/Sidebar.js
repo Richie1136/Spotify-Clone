@@ -8,7 +8,7 @@ import { useSpotifyContext } from '../../store/spotify-context'
 
 const Sidebar = () => {
 
-  const [{ playLists }, dispatch] = useSpotifyContext()
+  const [{ playlists }, dispatch] = useSpotifyContext()
 
   return (
     <div className='sidebar'>
@@ -19,9 +19,10 @@ const Sidebar = () => {
       <br />
       <strong className='sidebar_title'>PLAYLISTS</strong>
       <hr />
-      {playLists?.items?.map(playlist => {
+      {playlists?.items?.map(playlist => {
         return <SideBarOption key={playlist.id} title={playlist.name} />
       })}
+
     </div>
   )
 }
